@@ -1,5 +1,3 @@
-markdown
-Copy code
 # Kép Rendező Script
 
 Ez a Python szkript segít rendszerezni a képeket a készítés dátuma alapján egy megadott mappában. A program a képek EXIF metaadatainak segítségével rendezi a képeket évek és hónapok szerint mappákba.
