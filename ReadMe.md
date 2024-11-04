@@ -45,9 +45,9 @@ Ha a megadott mappa nem létezik, vagy nem elérhető, a program egy hibaüzenet
 
 ### Példa Kimenet
 
-2023_foto.jpg átmozgatva ide: C:/felhasználó/képek/2023/05/2023_foto.jpg
-2022_nyar.jpg átmozgatva ide: C:/felhasználó/képek/2022/07/2022_nyar.jpg
-Nincs infó a dátumról ebben a fájlban: 2021_random.png.
+2023_foto.jpg átmozgatva ide: C:/felhasználó/képek/2023/05/2023_foto.jpg<br>
+2022_nyar.jpg átmozgatva ide: C:/felhasználó/képek/2022/07/2022_nyar.jpg<br>
+Nincs infó a dátumról ebben a fájlban: 2021_random.png.<br>
 
 ### Megjegyzések
 
