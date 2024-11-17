@@ -16,7 +16,7 @@ def find_duplicate_images(directory):
     def calculate_image_hash(file_path):
         try:
             with Image.open(file_path) as img:
-                return str(imagehash.average_hash(img))
+                return imagehash.average_hash(img)  # Return an ImageHash object
         except Exception as e:
             print(f"Error hashing {file_path}: {e}")
             return None
@@ -34,7 +34,7 @@ def find_duplicate_images(directory):
                 if metadata and image_hash:
                     match_found = False
                     for hash_key, metadata_files in hashes.items():
-                        if hash_key == image_hash or hash_key - imagehash.hex_to_hash(image_hash) < 5:
+                        if hash_key - image_hash < 5:  # Compare as ImageHash objects
                             if any(metadata == get_image_metadata(other_file) for other_file in metadata_files):
                                 duplicates[hash_key].append(file_path)
                                 match_found = True
@@ -43,7 +43,7 @@ def find_duplicate_images(directory):
                     if not match_found:
                         hashes[image_hash] = [file_path]
 
-    return {hash_key: files for hash_key, files in duplicates.items() if len(files) > 1}
+    return {str(hash_key): files for hash_key, files in duplicates.items() if len(files) > 1}
 
 
 if __name__ == "__main__":
